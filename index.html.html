@@ -1,0 +1,1189 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>PANAUDIO × MBL — Dźwięk bez kompromisów | High-End Audio z Berlina</title>
+<meta name="description" content="PANAUDIO prezentuje MBL — niemiecki high-end audio z Berlina. Technologia Radialstrahler 360°, linie Reference, Noble i Cadenza.">
+<meta name="theme-color" content="#0b0b0a">
+<meta name="robots" content="index,follow">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PANAUDIO">
+<meta property="og:title" content="PANAUDIO × MBL — Dźwięk bez kompromisów">
+<meta property="og:description" content="Niemiecki high-end audio z Berlina. Technologia Radialstrahler, linie Reference, Noble i Cadenza.">
+<meta property="og:image" content="Image/hero.jpg">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:locale:alternate" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0b0a'/%3E%3Ccircle cx='32' cy='32' r='19' fill='none' stroke='%23c2a46c' stroke-width='2'/%3E%3Ctext x='32' y='39' font-family='Georgia,serif' font-size='20' fill='%23c2a46c' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Open+Sans:wght@300;400;600&display=swap">
+<link rel="preload" as="image" href="Image/hero.jpg">
+<script>/* enable entrance animations before first paint (prevents flashes) */
+(function(d){d.classList.add("js");if("IntersectionObserver" in window&&window.matchMedia("(prefers-reduced-motion: no-preference)").matches)d.classList.add("motion");})(document.documentElement);</script>
+<style>
+/* =========================================================
+   PANAUDIO × MBL — design tokens
+   ========================================================= */
+:root{
+  --black:#0a0a09; --graphite:#17181a; --graphite-hi:#1e1f22; --panel:#191815; --panel-2:#211f1b;
+  --cream:#f4efe6; --beige:#e9e0d1; --sand:#d8cbb5;
+  --gold:#c2a46c; --gold-soft:#dcc597; --gold-deep:#9c8150;
+  --ink:#f3efe8; --muted:#a8a296; --muted-dark:#5f594f; --text-dark:#1d1b17;
+  --line:rgba(194,164,108,.24); --line-soft:rgba(255,255,255,.09);
+  --serif:"Lora",Georgia,"Times New Roman",serif;
+  --sans:"Open Sans","Segoe UI",Helvetica,Arial,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --gutter:clamp(20px,5.5vw,88px);
+  --header-h:84px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--black);color:var(--ink);font-family:var(--sans);font-weight:400;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;cursor:pointer;background:none;border:0;padding:0}
+:focus-visible{outline:2px solid var(--gold-soft);outline-offset:4px;border-radius:4px}
+.skip{position:absolute;left:16px;top:-60px;z-index:999;background:var(--gold);color:var(--black);padding:10px 18px;border-radius:40px;font-size:13px;transition:top .3s}
+.skip:focus{top:14px}
+.container{width:100%;max-width:1440px;margin:0 auto;padding-inline:var(--gutter)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- typography ---------- */
+.eyebrow{display:inline-flex;align-items:center;gap:14px;font-size:11px;font-weight:600;letter-spacing:.42em;text-transform:uppercase;color:var(--gold)}
+.eyebrow::before{content:"";width:34px;height:1px;background:currentColor;opacity:.7}
+.eyebrow.center::after{content:"";width:34px;height:1px;background:currentColor;opacity:.7}
+.h-display{font-family:var(--serif);font-weight:400;letter-spacing:-.02em;line-height:1.08;margin:0}
+.h2{font-size:clamp(34px,4.6vw,66px)}
+.h2 em,.h-display em{font-style:normal;color:var(--gold)}
+.lead{font-size:clamp(15px,1.15vw,17px);line-height:1.9;color:var(--muted);max-width:580px;margin:0}
+.lead + .lead{margin-top:18px}
+.section{position:relative;padding-block:clamp(84px,11vw,160px)}
+
+/* ---------- buttons ---------- */
+.btn{--b:rgba(255,255,255,.26);position:relative;isolation:isolate;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:56px;padding:0 34px;border-radius:999px;border:1px solid var(--b);background:rgba(255,255,255,.025);color:var(--ink);font-size:11.5px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;white-space:nowrap;transition:border-color .45s var(--ease),box-shadow .45s var(--ease),background .45s var(--ease),color .45s var(--ease),transform .45s var(--ease)}
+.btn::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,transparent 25%,rgba(220,197,151,.28) 48%,transparent 70%);transform:translateX(-110%);transition:transform .6s var(--ease)}
+.btn:hover,.btn:focus-visible{border-color:var(--gold);background:rgba(194,164,108,.08);box-shadow:0 0 0 1px rgba(194,164,108,.18),0 0 28px rgba(194,164,108,.22);color:#fff}
+.btn:hover::before,.btn:focus-visible::before{transform:translateX(110%)}
+.btn .arr{display:inline-block;font-size:15px;letter-spacing:0;transition:transform .45s var(--ease)}
+.btn:hover .arr,.btn:focus-visible .arr{transform:translateX(5px)}
+.btn--gold{--b:var(--gold);background:linear-gradient(135deg,#cdb07a,#a98b55);color:#14120e}
+.btn--gold:hover,.btn--gold:focus-visible{background:linear-gradient(135deg,#dcc597,#b8995f);color:#0f0e0b;box-shadow:0 10px 40px rgba(194,164,108,.3)}
+.btn--dark{--b:rgba(29,27,23,.35);color:var(--text-dark);background:transparent}
+.btn--dark:hover,.btn--dark:focus-visible{color:var(--text-dark);border-color:var(--gold-deep);background:rgba(194,164,108,.1)}
+.btn--sm{min-height:46px;padding:0 24px;font-size:10.5px;letter-spacing:.26em}
+.link-line{display:inline-flex;align-items:center;gap:12px;font-size:11px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);padding-bottom:8px;background:linear-gradient(var(--gold),var(--gold)) left bottom/100% 1px no-repeat;transition:background-size .5s var(--ease),color .3s}
+.link-line:hover{background-size:40% 1px;color:var(--gold-soft)}
+.actions{display:flex;flex-wrap:wrap;gap:14px}
+
+/* ---------- header ---------- */
+.header{position:fixed;inset:0 0 auto;z-index:100;height:var(--header-h);padding-top:env(safe-area-inset-top,0px);border-bottom:1px solid transparent;transition:transform .6s var(--ease),background .5s ease,border-color .5s ease,backdrop-filter .5s ease}
+.header.is-scrolled{background:rgba(11,11,10,.72);-webkit-backdrop-filter:blur(18px) saturate(140%);backdrop-filter:blur(18px) saturate(140%);border-bottom-color:var(--line)}
+.header.is-hidden{transform:translateY(-105%)}
+.nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{display:flex;flex-direction:column;align-items:flex-start;line-height:1}
+.logo b{font-family:var(--serif);font-weight:500;font-size:22px;letter-spacing:.24em;color:var(--ink)}
+.logo small{margin-top:7px;font-size:8.5px;letter-spacing:.46em;color:var(--gold);text-transform:uppercase}
+.menu{display:flex;align-items:center;gap:clamp(18px,2.4vw,40px)}
+.menu a{position:relative;font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:rgba(243,239,232,.82);padding:8px 0;transition:color .3s}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .45s var(--ease)}
+.menu a:hover{color:#fff}.menu a:hover::after{transform:scaleX(1);transform-origin:left}
+.nav-right{display:flex;align-items:center;gap:18px}
+.lang{display:flex;align-items:center;border:1px solid var(--line-soft);border-radius:999px;padding:3px}
+.lang button{min-width:40px;height:32px;border-radius:999px;font-size:11px;font-weight:600;letter-spacing:.14em;color:var(--muted);transition:background .35s,color .35s}
+.lang button[aria-pressed="true"]{background:rgba(194,164,108,.16);color:var(--gold-soft)}
+.lang button:hover{color:#fff}
+.burger{display:none;width:46px;height:46px;border-radius:50%;border:1px solid var(--line-soft);position:relative}
+.burger span{position:absolute;left:14px;right:14px;height:1px;background:var(--ink);transition:transform .45s var(--ease),opacity .3s}
+.burger span:nth-child(1){top:18px}.burger span:nth-child(2){top:23px}.burger span:nth-child(3){top:28px}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(5px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
+.mobile-menu{position:fixed;inset:0;z-index:99;background:rgba(10,10,9,.97);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);display:flex;flex-direction:column;justify-content:center;padding:calc(var(--header-h) + 20px) var(--gutter) 40px;opacity:0;visibility:hidden;transition:opacity .5s var(--ease),visibility .5s}
+.mobile-menu.open{opacity:1;visibility:visible}
+.mobile-menu nav{display:flex;flex-direction:column;gap:6px}
+.mobile-menu nav a{font-family:var(--serif);font-size:clamp(30px,8vw,44px);line-height:1.35;color:var(--ink);transform:translateY(18px);opacity:0;transition:transform .6s var(--ease),opacity .6s,color .3s}
+.mobile-menu nav a:hover{color:var(--gold)}
+.mobile-menu.open nav a{transform:none;opacity:1}
+.mobile-menu.open nav a:nth-child(2){transition-delay:.05s}.mobile-menu.open nav a:nth-child(3){transition-delay:.1s}.mobile-menu.open nav a:nth-child(4){transition-delay:.15s}.mobile-menu.open nav a:nth-child(5){transition-delay:.2s}
+.mobile-menu .mm-foot{margin-top:44px;display:flex;flex-direction:column;align-items:flex-start;gap:22px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:grid;place-items:center;overflow:hidden;background:#080807 center/cover no-repeat;text-align:center}
+.hero-media{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.04);animation:heroZoom 14s var(--ease) both}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(8,8,7,.35),rgba(8,8,7,.82)),linear-gradient(180deg,rgba(8,8,7,.55) 0%,rgba(8,8,7,.25) 40%,rgba(8,8,7,.92) 100%)}
+.hero-inner{position:relative;z-index:2;max-width:1060px;padding:calc(var(--header-h) + 40px) var(--gutter) 120px}
+.hero .eyebrow{justify-content:center}
+.hero h1{margin:30px 0 26px;font-size:clamp(44px,7.4vw,112px)}
+.hero-logo{display:block;width:clamp(92px,9vw,132px);height:auto;margin:34px auto 0;color:var(--ink);filter:drop-shadow(0 4px 24px rgba(0,0,0,.45))}
+.hero-logo .ring{stroke-dasharray:952;stroke-dashoffset:0;transform:rotate(-90deg);transform-origin:249.5px 249.5px}
+.hero-logo .letters{transform-origin:249.5px 252px}
+.motion .hero-logo .ring{animation:ringDraw 1.8s cubic-bezier(.65,0,.25,1) .15s both}
+.motion .hero-logo .letters{animation:lettersIn 1.2s var(--ease) .9s both}
+@keyframes ringDraw{from{stroke-dashoffset:952}to{stroke-dashoffset:0}}
+@keyframes lettersIn{from{opacity:0;transform:translateY(18px) scale(.92)}to{opacity:1;transform:none}}
+.hero h1{margin-top:22px}
+.hero h1 em{font-style:italic;color:var(--gold-soft)}
+.hero .lead{margin:0 auto;color:#cfc8bb;max-width:640px}
+.hero .actions{justify-content:center;margin-top:44px}
+.hero-in{opacity:0;transform:translateY(26px);animation:rise 1.1s var(--ease) forwards}
+.hero-in.d1{animation-delay:.2s}.hero-in.d2{animation-delay:.42s}.hero-in.d3{animation-delay:.64s}.hero-in.d4{animation-delay:.86s}
+.scroll-cue{position:absolute;z-index:2;left:50%;bottom:34px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:12px;font-size:9.5px;letter-spacing:.4em;text-transform:uppercase;color:var(--muted)}
+.scroll-cue i{width:1px;height:46px;background:linear-gradient(var(--gold),transparent);transform-origin:top;animation:cue 2.4s var(--ease) infinite}
+@keyframes heroZoom{from{transform:scale(1.12)}to{transform:scale(1.04)}}
+@keyframes rise{to{opacity:1;transform:none}}
+@keyframes cue{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+
+/* ---------- image frames ---------- */
+.frame{position:relative;overflow:hidden;border-radius:28px;background:var(--panel)}
+.frame img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease),filter .8s}
+.frame:hover img{transform:scale(1.045)}
+.frame::after{content:"";position:absolute;inset:0;border-radius:inherit;border:1px solid rgba(255,255,255,.08);pointer-events:none}
+.frame .cap{position:absolute;z-index:2;left:24px;bottom:22px;font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:#f1ece3;text-shadow:0 1px 10px rgba(0,0,0,.6)}
+/* fallback placeholder if an image is missing */
+.img-failed{background:radial-gradient(circle at 60% 35%,#3a352c,#16150f 70%)!important}
+.img-failed img{opacity:0!important}
+.img-failed::before{content:"MBL";position:absolute;inset:0;display:grid;place-items:center;font-family:var(--serif);font-size:clamp(28px,4vw,46px);letter-spacing:.4em;color:rgba(194,164,108,.45)}
+
+/* ---------- about ---------- */
+.about{background:var(--black)}
+.split{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(40px,7vw,120px);align-items:center}
+.about .frame{aspect-ratio:4/5}
+.about .frame img{object-position:68% center}
+.about .h2{margin:26px 0 30px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:44px 0 46px;padding-top:34px;border-top:1px solid var(--line)}
+.facts b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(30px,3vw,44px);color:var(--gold-soft);line-height:1}
+.facts span{display:block;margin-top:10px;font-size:12px;line-height:1.5;color:var(--muted)}
+
+/* ---------- art of sound ---------- */
+.sound{min-height:min(92vh,900px);display:flex;align-items:center;overflow:hidden;padding-block:clamp(100px,12vw,180px)}
+.sound .bg{position:absolute;inset:-8% 0;will-change:transform}
+.sound .bg img{width:100%;height:100%;object-fit:cover}
+.sound::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(9,9,8,.9) 0%,rgba(9,9,8,.62) 45%,rgba(9,9,8,.2) 100%),linear-gradient(180deg,var(--black) 0%,transparent 18%,transparent 82%,var(--graphite) 100%)}
+.sound .container{position:relative;z-index:2}
+.sound .h2{margin:26px 0 28px;max-width:720px}
+.sound .lead{color:#d0c9bc}
+.quote{margin:54px 0 0;padding-left:28px;border-left:1px solid var(--gold);max-width:620px}
+.quote p{margin:0;font-family:var(--serif);font-style:italic;font-size:clamp(21px,2.1vw,30px);line-height:1.45;color:var(--ink)}
+.quote cite{display:block;margin-top:16px;font-style:normal;font-size:10px;letter-spacing:.36em;text-transform:uppercase;color:var(--gold)}
+
+/* ---------- technology ---------- */
+.tech{background:radial-gradient(ellipse 70% 55% at 85% 10%,rgba(194,164,108,.06),transparent 60%),radial-gradient(ellipse 60% 50% at 0% 100%,rgba(255,255,255,.025),transparent 60%),linear-gradient(180deg,#1a1b1e 0%,#151618 100%)}
+.tech .split{grid-template-columns:1fr .9fr}
+.tech .h2{margin:26px 0 28px}
+.tech .frame{aspect-ratio:3/4;max-height:820px}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin:46px 0 46px;background:var(--line);border:1px solid var(--line);border-radius:24px;overflow:hidden}
+.feature{background:var(--graphite);padding:28px 26px;transition:background .5s var(--ease)}
+.feature:hover{background:var(--graphite-hi)}
+.feature .num{font-family:var(--serif);font-size:13px;color:var(--gold)}
+.feature h3{margin:12px 0 8px;font-family:var(--serif);font-weight:400;font-size:21px;line-height:1.25}
+.feature p{margin:0;font-size:13.5px;line-height:1.75;color:var(--muted)}
+
+/* ---------- collections ---------- */
+.collections{background:#000}
+.sec-head{text-align:center;max-width:820px;margin:0 auto clamp(48px,6vw,80px)}
+.sec-head .eyebrow{justify-content:center}
+.sec-head .h2{margin:24px 0 22px}
+.sec-head .lead{margin:0 auto}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,1.6vw,26px)}
+.card{position:relative;display:flex;flex-direction:column;border-radius:34px;overflow:hidden;border:1px solid rgba(255,255,255,.08);background:radial-gradient(ellipse 60% 40% at 50% 46%,rgba(194,164,108,.12),transparent 70%),linear-gradient(180deg,#161512 0%,#0e0d0b 100%);transition:transform .7s var(--ease),border-color .6s,box-shadow .7s var(--ease)}
+.card:hover{transform:translateY(-6px);border-color:rgba(194,164,108,.32);box-shadow:0 30px 70px rgba(0,0,0,.6),0 0 60px rgba(194,164,108,.08)}
+.card .ph{position:relative;margin:12px 12px 0;aspect-ratio:16/11;border-radius:24px;overflow:hidden;background:var(--panel)}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease),filter .8s}
+.card:hover .ph img{transform:scale(1.07);filter:brightness(1.06)}
+.card .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(14,13,11,.75))}
+.card .body{position:relative;flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;padding:34px clamp(22px,2.4vw,42px) 40px}
+/* animated gold lines */
+.card .body::before{content:"";position:absolute;top:0;left:50%;width:60%;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);transform:translateX(-50%) scaleX(.15);opacity:.5;transition:transform .9s var(--ease),opacity .6s}
+.card:hover .body::before{transform:translateX(-50%) scaleX(1);opacity:1}
+.card::after{content:"";position:absolute;left:34px;right:34px;bottom:0;height:1px;background:var(--gold);transform:scaleX(0);transition:transform .9s var(--ease)}
+.card:hover::after{transform:scaleX(1)}
+.card .kicker{font-size:10.5px;font-weight:600;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);padding-left:.5em}
+.card h3{margin:16px 0 18px;font-family:var(--serif);font-weight:400;font-size:clamp(34px,3.2vw,50px);line-height:1.05;letter-spacing:-.01em}
+.card h3 span{color:var(--gold)}
+.card p{margin:0;color:#c5bfb3;font-size:15px;line-height:1.85;max-width:420px}
+.card .models{margin:18px 0 0;font-size:11px;letter-spacing:.2em;color:var(--muted)}
+.card .card-actions{margin-top:auto;padding-top:32px;display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.coll-foot{margin-top:clamp(44px,5vw,70px);display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:24px 36px;text-align:center}
+.coll-foot p{margin:0;color:var(--muted);font-size:14px}
+
+/* ---------- engineering (light) ---------- */
+.engineering{background:var(--cream);color:var(--text-dark)}
+.engineering .eyebrow{color:var(--gold-deep)}
+.engineering .lead{color:#5d574d}
+.engineering .h2{margin:26px 0 30px;color:var(--text-dark)}
+.engineering .h2 em{color:var(--gold-deep)}
+.engineering .split{grid-template-columns:1fr 1.1fr}
+.eng-media{position:relative}
+.eng-media .frame{aspect-ratio:4/3;background:var(--beige)}
+.eng-media .frame::after{border-color:rgba(0,0,0,.06)}
+.eng-media .badge{position:absolute;left:clamp(-20px,-2vw,-10px);bottom:clamp(-30px,-3vw,-20px);background:var(--black);color:var(--ink);border-radius:22px;padding:24px 28px;box-shadow:0 30px 60px rgba(0,0,0,.25)}
+.eng-media .badge b{display:block;font-family:var(--serif);font-weight:400;font-size:34px;color:var(--gold-soft);line-height:1}
+.eng-media .badge span{display:block;margin-top:8px;font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted)}
+.checklist{list-style:none;margin:34px 0 44px;padding:0;border-top:1px solid rgba(29,27,23,.14)}
+.checklist li{display:flex;gap:18px;padding:16px 0;border-bottom:1px solid rgba(29,27,23,.14);font-size:14.5px;color:#3c3730}
+.checklist li::before{content:"";flex:none;width:7px;height:7px;margin-top:9px;border:1px solid var(--gold-deep);transform:rotate(45deg)}
+
+/* ---------- experience ---------- */
+.experience{background:var(--black);padding-block:clamp(70px,8vw,120px)}
+.exp-box{position:relative;overflow:hidden;border-radius:clamp(26px,3vw,40px);min-height:clamp(520px,62vw,720px);display:grid;align-items:end}
+.exp-box img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 2s var(--ease)}
+.exp-box:hover img{transform:scale(1.03)}
+.exp-box::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(8,8,7,.94) 0%,rgba(8,8,7,.55) 45%,rgba(8,8,7,.15) 100%)}
+.exp-box::after{content:"";position:absolute;inset:0;z-index:1;border-radius:inherit;border:1px solid rgba(255,255,255,.09);pointer-events:none}
+.exp-content{position:relative;z-index:2;padding:clamp(32px,5vw,80px);max-width:900px}
+.exp-content .h2{margin:24px 0 24px;font-size:clamp(36px,5.4vw,80px)}
+.exp-content .lead{color:#d6cfc2;margin-bottom:40px}
+
+/* ---------- contact ---------- */
+.contact{background:radial-gradient(ellipse 60% 60% at 100% 0%,rgba(194,164,108,.05),transparent 60%),linear-gradient(180deg,#18191b 0%,#141517 100%);border-top:1px solid var(--line-soft)}
+.contact .split{grid-template-columns:1fr 1.1fr;align-items:start}
+.contact .h2{margin:26px 0 26px}
+.contact-list{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:26px;overflow:hidden}
+.contact-item{background:var(--graphite);padding:30px 28px;min-width:0;transition:background .4s}
+.contact-item:hover{background:var(--graphite-hi)}
+.contact-item small{display:block;font-size:10px;font-weight:600;letter-spacing:.36em;text-transform:uppercase;color:var(--gold)}
+.contact-item a,.contact-item p{display:block;margin:12px 0 0;font-family:var(--serif);font-size:clamp(17px,1.5vw,21px);line-height:1.45;color:var(--ink);overflow-wrap:anywhere}
+.contact-item a:hover{color:var(--gold-soft)}
+.contact-item a.mail{font-size:clamp(15px,1.2vw,18px)}
+.contact-item .note{margin-top:8px;font-family:var(--sans);font-size:11.5px;color:var(--muted)}
+.contact .actions{margin-top:40px}
+
+/* ---------- footer ---------- */
+.footer{background:#070706;padding:clamp(64px,7vw,96px) 0 calc(28px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line)}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+.footer h4{margin:0 0 20px;font-size:10px;font-weight:600;letter-spacing:.36em;text-transform:uppercase;color:var(--gold)}
+.footer ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.footer li a,.footer li button{font-size:13.5px;color:var(--muted);transition:color .3s;text-align:left}
+.footer li a:hover,.footer li button:hover{color:var(--ink)}
+.f-brand p{margin:20px 0 0;max-width:320px;font-size:13.5px;color:var(--muted);line-height:1.8}
+.f-bottom{margin-top:clamp(48px,6vw,80px);padding-top:26px;border-top:1px solid var(--line-soft);display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px 30px;font-size:12px;color:#7a7468}
+
+/* ---------- reveal animations (active only with JS + motion allowed) ---------- */
+.progress{position:fixed;top:0;left:0;right:0;height:2px;z-index:120;pointer-events:none}
+.progress i{display:block;height:100%;background:linear-gradient(90deg,var(--gold-deep),var(--gold-soft));transform:scaleX(0);transform-origin:left;box-shadow:0 0 12px rgba(194,164,108,.6)}
+/* base fade-up with soft focus */
+.motion .reveal:not(.in){opacity:0;transform:translateY(34px);filter:blur(8px)}
+.motion .reveal:not(.done){transition:opacity 1.1s var(--ease),transform 1.2s var(--ease),filter 1.1s var(--ease)}
+/* headings: words rise from behind a mask */
+.split-h .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding:0 .08em .16em 0;margin:0 -.08em -.16em 0}
+.split-h .w>span{display:inline-block;transform-origin:0 0;transition:transform 1.25s var(--ease);transition-delay:calc(var(--i,0) * 70ms)}
+.motion .split-h:not(.in) .w>span{transform:translateY(130%) rotate(4deg)}
+.motion .split-h.reveal:not(.in){opacity:1;transform:none;filter:none}
+/* eyebrow line draws in */
+.eyebrow::before,.eyebrow.center::after{transition:width 1.1s var(--ease) .25s}
+.motion .eyebrow.reveal:not(.in)::before,.motion .eyebrow.reveal:not(.in)::after{width:0}
+.motion .eyebrow.reveal:not(.in){filter:none;transform:translateX(-14px)}
+/* images: curtain wipe + slow zoom-out + gold edge */
+.motion .reveal-img:not(.in){opacity:0}
+.motion .reveal-img:not(.done){transition:opacity .6s ease}
+.motion .reveal-img:not(.in) img{clip-path:inset(0 0 100% 0);transform:scale(1.28);filter:brightness(.4) saturate(.6)}
+.motion .reveal-img:not(.done) img{transition:clip-path 1.5s cubic-bezier(.77,0,.18,1),transform 2.4s var(--ease),filter 2s ease}
+.reveal-img .edge{position:absolute;left:0;right:0;top:0;height:2px;z-index:4;background:linear-gradient(90deg,transparent,var(--gold-soft),transparent);opacity:0;pointer-events:none}
+.motion .reveal-img.in:not(.done) .edge{animation:edge 1.5s cubic-bezier(.77,0,.18,1) forwards}
+@keyframes edge{0%{top:0;opacity:1}85%{opacity:1}100%{top:100%;opacity:0}}
+/* collection cards: 3D lift */
+.cards{perspective:1400px}
+.card.reveal{transform-origin:50% 100%}
+.motion .card.reveal:not(.in){opacity:0;transform:translateY(80px) rotateX(14deg) scale(.94);filter:blur(10px)}
+.motion .card.reveal:not(.done){transition:opacity 1.2s var(--ease),transform 1.5s var(--ease),filter 1.2s var(--ease)}
+/* experience box: zoom-in from rounded */
+.motion .exp-box.reveal:not(.in){opacity:0;transform:scale(.9);filter:none;border-radius:90px}
+.motion .exp-box.reveal:not(.done){transition:opacity 1.2s ease,transform 1.6s var(--ease),border-radius 1.6s var(--ease)}
+.motion .exp-box.reveal:not(.in) img{transform:scale(1.25)}
+/* quote line grows */
+.quote{position:relative;border-left:0}
+.quote::before{content:"";position:absolute;left:0;top:0;bottom:0;width:1px;background:var(--gold);transform-origin:top;transition:transform 1.4s var(--ease) .3s}
+.motion .quote.reveal:not(.in)::before{transform:scaleY(0)}
+/* cascades for lists / grids */
+.motion .stagger:not(.in)>*{opacity:0;transform:translateY(26px)}
+.motion .stagger:not(.done)>*{transition:opacity .9s var(--ease),transform 1s var(--ease);transition-delay:calc(var(--i,0) * 110ms + 180ms)}
+.img-failed::before{z-index:1}
+
+/* ---------- overlays: modal, lightbox, cookie ---------- */
+.overlay{position:fixed;inset:0;z-index:300;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(5,5,4,.82);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);opacity:0;visibility:hidden;transition:opacity .45s var(--ease),visibility .45s}
+.overlay.open{opacity:1;visibility:visible}
+.modal{position:relative;width:min(760px,100%);max-height:86vh;overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:28px;padding:clamp(28px,4vw,52px);transform:translateY(20px);transition:transform .5s var(--ease)}
+.overlay.open .modal{transform:none}
+.modal h2{margin:14px 0 10px;font-family:var(--serif);font-weight:400;font-size:clamp(28px,3vw,38px)}
+.modal h3{margin:28px 0 8px;font-family:var(--serif);font-weight:400;font-size:19px;color:var(--gold-soft)}
+.modal p,.modal li{font-size:14px;line-height:1.8;color:#c3bdb1}
+.modal .draft{display:inline-block;margin:6px 0 10px;padding:8px 14px;border:1px dashed var(--gold);border-radius:12px;font-size:12px;color:var(--gold-soft)}
+.x{position:absolute;top:16px;right:16px;width:46px;height:46px;border-radius:50%;border:1px solid var(--line-soft);display:grid;place-items:center;font-size:20px;line-height:1;transition:border-color .3s,transform .5s var(--ease)}
+.x:hover{border-color:var(--gold);transform:rotate(90deg)}
+.lightbox{flex-direction:column;padding:70px 16px 16px}
+.lb-stage{position:relative;flex:1;width:100%;max-width:1400px;display:flex;align-items:center;justify-content:center;min-height:0}
+.lb-stage img{max-width:100%;max-height:100%;object-fit:contain;border-radius:16px;transition:opacity .35s}
+.lb-stage img.loading{opacity:.15}
+.lb-top{position:absolute;top:18px;left:20px;right:84px;display:flex;align-items:center;gap:18px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+.lb-top b{font-family:var(--serif);font-weight:400;font-size:20px;letter-spacing:.02em;text-transform:none;color:var(--ink)}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:54px;height:54px;border-radius:50%;border:1px solid var(--line-soft);background:rgba(10,10,9,.6);display:grid;place-items:center;font-size:20px;transition:border-color .3s,background .3s}
+.lb-nav:hover{border-color:var(--gold);background:rgba(194,164,108,.14)}
+.lb-prev{left:10px}.lb-next{right:10px}
+.lb-thumbs{display:flex;gap:8px;max-width:100%;overflow-x:auto;padding:14px 4px 4px;scrollbar-width:thin}
+.lb-thumbs button{flex:none;width:84px;height:58px;border-radius:10px;overflow:hidden;opacity:.45;border:1px solid transparent;transition:opacity .3s,border-color .3s}
+.lb-thumbs button img{width:100%;height:100%;object-fit:cover}
+.lb-thumbs button[aria-current="true"],.lb-thumbs button:hover{opacity:1;border-color:var(--gold)}
+.cookie{position:fixed;z-index:250;left:16px;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));margin:0 auto;max-width:980px;display:flex;align-items:center;gap:20px 30px;padding:22px 26px;border-radius:24px;background:rgba(22,21,18,.94);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border:1px solid var(--line);box-shadow:0 20px 60px rgba(0,0,0,.5);transform:translateY(140%);transition:transform .7s var(--ease)}
+.cookie.show{transform:none}
+.cookie p{margin:0;flex:1;font-size:13px;line-height:1.7;color:#c9c3b7}
+.cookie p button{color:var(--gold-soft);text-decoration:underline;text-underline-offset:3px}
+.cookie .actions{flex:none;gap:10px}
+body.locked{overflow:hidden}
+
+/* ---------- responsive ---------- */
+@media (max-width:1180px){
+  .menu{display:none}.burger{display:block}
+  .nav-right .lang,.nav-right .btn{display:none}
+  .cards{grid-template-columns:1fr 1fr}
+  .cards .card:last-child{grid-column:1/-1;max-width:calc(50% - 13px);justify-self:center;width:100%}
+  .f-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px){
+  :root{--header-h:72px}
+  .split,.tech .split,.engineering .split,.contact .split{grid-template-columns:1fr}
+  .about .frame{aspect-ratio:4/3}
+  .tech .frame{aspect-ratio:4/3}
+  .tech .media{order:-1}
+  .eng-media{margin-bottom:30px}
+  .cards{grid-template-columns:1fr}
+  .cards .card:last-child{max-width:none;grid-column:auto}
+  .card .ph{aspect-ratio:16/10}
+  .sound::before{background:linear-gradient(180deg,var(--black) 0%,rgba(9,9,8,.7) 25%,rgba(9,9,8,.82) 100%)}
+}
+@media (max-width:600px){
+  body{font-size:15px}
+  .logo b{font-size:18px}.logo small{font-size:7.5px}
+  .hero-inner{padding-bottom:110px}
+  .actions{flex-direction:column;align-items:stretch}
+  .actions .btn{width:100%}
+  .btn{padding:0 22px;letter-spacing:.22em}
+  .facts{grid-template-columns:1fr 1fr 1fr;gap:12px}
+  .facts span{font-size:11px}
+  .features{grid-template-columns:1fr}
+  .contact-list{grid-template-columns:1fr}
+  .card .card-actions{flex-direction:column;align-items:stretch;width:100%}
+  .card .card-actions .btn{width:100%}
+  .f-grid{grid-template-columns:1fr;gap:34px}
+  .cookie{flex-direction:column;align-items:stretch;padding:20px}
+  .cookie .actions{flex-direction:row}
+  .cookie .actions .btn{flex:1;width:auto;padding:0 12px}
+  .lb-nav{width:44px;height:44px;top:auto;bottom:-6px;transform:none}
+  .lb-stage{padding-bottom:50px}
+  .eng-media .badge{left:14px;bottom:-24px;padding:18px 22px}
+  .quote{padding-left:20px}
+}
+@media (max-width:360px){
+  .eyebrow{letter-spacing:.3em;font-size:10px}
+  .eyebrow::before,.eyebrow.center::after{width:20px}
+  .facts{grid-template-columns:1fr}
+  .btn{letter-spacing:.16em;font-size:10.5px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .hero-in{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main" data-i="skip">Przejdź do treści</a>
+
+<!-- ================= HEADER ================= -->
+<header class="header" id="header">
+  <div class="container nav">
+    <a class="logo" href="#top" aria-label="PANAUDIO — home"><b>PANAUDIO</b><small>High-End Audio</small></a>
+    <nav class="menu" aria-label="Main">
+      <a href="#about" data-i="nav_mbl">MBL</a>
+      <a href="#sound" data-i="nav_phil">Filozofia</a>
+      <a href="#technology" data-i="nav_tech">Technologia</a>
+      <a href="#collections" data-i="nav_coll">Kolekcje</a>
+      <a href="#contact" data-i="nav_contact">Kontakt</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang" role="group" aria-label="Język / Language">
+        <button type="button" data-lang="pl" aria-pressed="true">PL</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="btn btn--sm" data-ext="mbl" target="_blank" rel="noopener noreferrer"><span data-i="hdr_cta">Produkty MBL</span><span class="arr" aria-hidden="true">↗</span></a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="mobileMenu" data-i-aria="menu_open" aria-label="Otwórz menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <nav aria-label="Mobile">
+    <a href="#about" data-i="nav_mbl">MBL</a>
+    <a href="#sound" data-i="nav_phil">Filozofia</a>
+    <a href="#technology" data-i="nav_tech">Technologia</a>
+    <a href="#collections" data-i="nav_coll">Kolekcje</a>
+    <a href="#contact" data-i="nav_contact">Kontakt</a>
+  </nav>
+  <div class="mm-foot">
+    <div class="lang" role="group" aria-label="Język / Language">
+      <button type="button" data-lang="pl" aria-pressed="true">PL</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <a class="btn btn--gold" data-ext="mbl" target="_blank" rel="noopener noreferrer"><span data-i="hdr_cta">Produkty MBL</span><span class="arr" aria-hidden="true">↗</span></a>
+  </div>
+</div>
+
+<div class="progress" aria-hidden="true"><i></i></div>
+<main id="main">
+<!-- ================= HERO ================= -->
+<section class="hero" id="top" aria-labelledby="heroTitle">
+  <!-- Hero video: replace the file in SITE_VIDEOS.hero (JS) — poster = SITE_IMAGES.hero -->
+  <video class="hero-media" id="heroVideo" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+  <div class="hero-inner">
+    <div class="eyebrow center hero-in d1" data-i="hero_eyebrow">PANAUDIO prezentuje</div>
+    <svg class="hero-logo" viewBox="93 93 313 313" role="img" aria-label="MBL"><circle class="ring" cx="249.5" cy="249.5" r="151.28" fill="none" stroke="currentColor" stroke-width="10.43"/><g class="letters" fill="currentColor"><path d="M293.402 178.178C287.696 172.204 280.914 169.212 272.934 169.212C267.64 169.199 262.457 170.728 258.018 173.614C254.825 175.648 252.032 178.251 249.777 181.292C247.564 178.248 244.799 175.647 241.626 173.622C237.153 170.712 231.924 169.179 226.587 169.212C220.347 169.101 214.262 171.167 209.381 175.057C209.378 174.282 209.221 173.515 208.919 172.801C208.616 172.087 208.175 171.441 207.62 170.9C206.483 169.831 204.982 169.237 203.422 169.237C201.862 169.237 200.361 169.831 199.224 170.9C198.636 171.446 198.163 172.105 197.833 172.837C197.502 173.569 197.321 174.36 197.301 175.163V239.067H209.723V199.632C209.723 194.464 211.206 190.185 214.614 186.59C216.116 184.877 217.973 183.509 220.056 182.583C222.139 181.657 224.398 181.195 226.677 181.227C231.486 181.227 235.138 182.971 238.504 186.55C241.871 190.128 243.256 194.464 243.256 199.591V239.067H255.679V199.632C255.641 197.222 256.081 194.829 256.974 192.591C257.866 190.352 259.194 188.313 260.879 186.59C262.402 184.897 264.263 183.541 266.342 182.611C268.422 181.681 270.673 181.196 272.951 181.189C275.228 181.183 277.482 181.653 279.567 182.571C281.652 183.488 283.521 184.833 285.055 186.517C288.501 189.985 290.442 194.67 290.459 199.559V239.067H301.667V199.632C301.667 191.326 299.034 184.104 293.402 178.178Z"/><path d="M301.667 249.5H290.492V336.61H301.667V249.5Z"/><path d="M209.462 272.364V249.5H197.333V336.61H209.479V328.011H209.772C211.913 329.882 214.272 331.489 216.798 332.795C223.445 336.202 231.012 337.375 238.379 336.142C245.745 334.909 252.517 331.334 257.692 325.949C264.274 319.006 267.943 309.803 267.943 300.236C267.943 290.669 264.274 281.467 257.692 274.524C254.499 271.078 250.618 268.342 246.3 266.491C241.983 264.641 237.325 263.717 232.628 263.781C227.061 263.751 221.572 265.089 216.643 267.677C214.211 269.013 211.905 270.568 209.756 272.323L209.462 272.364ZM248.987 317.463C246.927 319.716 244.414 321.507 241.613 322.718C238.811 323.929 235.785 324.533 232.733 324.49C229.67 324.533 226.632 323.932 223.816 322.724C221 321.517 218.47 319.73 216.391 317.48C214.147 315.24 212.382 312.568 211.202 309.625C210.023 306.683 209.453 303.532 209.527 300.362V299.36C209.635 293.103 212.193 287.139 216.651 282.748C218.727 280.563 221.234 278.834 224.014 277.671C226.794 276.508 229.786 275.936 232.799 275.991C235.843 275.95 238.861 276.56 241.651 277.778C244.441 278.997 246.939 280.797 248.979 283.058C253.354 287.716 255.789 293.866 255.789 300.257C255.789 306.647 253.354 312.797 248.979 317.455L248.987 317.463Z"/></g></svg>
+    <h1 class="h-display" id="heroTitle"><span class="sr-only">MBL — </span><span data-i-html="hero_title">Dźwięk <em>bez kompromisów</em></span></h1>
+    <p class="lead hero-in d3" data-i="hero_sub">Niemiecka inżynieria, ręczne wykonanie w Berlinie i technologia Radialstrahler, która wypełnia pomieszczenie dźwiękiem w 360°.</p>
+    <div class="actions hero-in d4">
+      <a class="btn btn--gold" href="#about"><span data-i="hero_btn1">Odkryj MBL</span><span class="arr" aria-hidden="true">↓</span></a>
+      <a class="btn" data-ext="mbl" target="_blank" rel="noopener noreferrer"><span data-i="hero_btn2">Zobacz kolekcje</span><span class="arr" aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"><span data-i="scroll">Przewiń</span><i></i></div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="section about" id="about" aria-labelledby="aboutTitle">
+  <div class="container split">
+    <figure class="frame reveal-img" style="margin:0">
+      <img data-img="about" loading="lazy" decoding="async" width="2000" height="1500" alt="Kolumny MBL 101 E MKII Radialstrahler we wnętrzu salonu" data-i-alt="alt_about">
+      <figcaption class="cap">MBL · Berlin · 1979</figcaption>
+    </figure>
+    <div>
+      <div class="eyebrow reveal" data-i="about_label">01 — O marce</div>
+      <h2 class="h-display h2 reveal" id="aboutTitle" data-i-html="about_title">Nie tylko słyszeć. <em>Poczuć muzykę.</em></h2>
+      <p class="lead reveal" data-i="about_p1">MBL to jeden z najbardziej cenionych niemieckich producentów high-end audio, łączący innowacyjną inżynierię akustyczną z wyjątkowym wzornictwem i rzemiosłem.</p>
+      <p class="lead reveal" data-i="about_p2">Firma powstała w Berlinie w 1979 roku.</p>
+      <p class="lead reveal" data-i="about_p3">Od ponad czterdziestu lat MBL dąży do jednego celu.</p>
+      <div class="facts reveal stagger">
+        <div><b data-count="1979" data-from="1900">1979</b><span data-i="fact1">Założenie w Berlinie</span></div>
+        <div><b data-count="360" data-suffix="°">360°</b><span data-i="fact2">Dookólne promieniowanie dźwięku</span></div>
+        <div><b data-count="40" data-suffix="+">40+</b><span data-i="fact3">Lat doświadczenia</span></div>
+      </div>
+      <a class="btn reveal" data-ext="mbl" target="_blank" rel="noopener noreferrer"><span data-i="about_cta">Dowiedz się więcej o MBL</span><span class="arr" aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= THE ART OF SOUND ================= -->
+<section class="section sound" id="sound" aria-labelledby="soundTitle">
+  <div class="bg" data-parallax><img data-img="sound" loading="lazy" decoding="async" alt="" width="2000" height="1000"></div>
+  <div class="container">
+    <div class="eyebrow reveal" data-i="sound_label">02 — Sztuka dźwięku</div>
+    <h2 class="h-display h2 reveal" id="soundTitle" data-i-html="sound_title">Muzyka, która wypełnia <em>całą przestrzeń.</em></h2>
+    <p class="lead reveal" data-i="sound_p">Jak koncert na żywo, który wypełnia całą salę, system MBL tworzy w domu wspólne pole dźwiękowe.</p>
+    <blockquote class="quote reveal">
+      <p data-i="quote">„Muzyka nie powinna być ograniczona do jednego miejsca w pokoju.”</p>
+      <cite data-i="quote_cite">United in Music — filozofia MBL</cite>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ================= TECHNOLOGY ================= -->
+<section class="section tech" id="technology" aria-labelledby="techTitle">
+  <div class="container split">
+    <div>
+      <div class="eyebrow reveal" data-i="tech_label">03 — Technologia</div>
+      <h2 class="h-display h2 reveal" id="techTitle" data-i-html="tech_title">Radialstrahler. <em>Pełne 360° dźwięku.</em></h2>
+      <p class="lead reveal" data-i="tech_p">Każda kolumna MBL powstaje według jednej zasady.</p>
+      <div class="features reveal stagger">
+        <div class="feature"><span class="num">01</span><h3 data-i="f1_t">Dźwięk dookólny</h3><p data-i="f1_p"></p></div>
+        <div class="feature"><span class="num">02</span><h3 data-i="f2_t">Przestrzenna scena</h3><p data-i="f2_p"></p></div>
+        <div class="feature"><span class="num">03</span><h3 data-i="f3_t">Innowacyjna konstrukcja</h3><p data-i="f3_p"></p></div>
+        <div class="feature"><span class="num">04</span><h3 data-i="f4_t">Naturalne brzmienie</h3><p data-i="f4_p"></p></div>
+      </div>
+      <a class="btn reveal" data-ext="mbl" target="_blank" rel="noopener noreferrer"><span data-i="tech_cta">Poznaj technologię MBL</span><span class="arr" aria-hidden="true">↗</span></a>
+    </div>
+    <figure class="frame media reveal-img" style="margin:0">
+      <img data-img="technology" loading="lazy" decoding="async" width="1335" height="2000" alt="Zbliżenie przetwornika Radialstrahler MBL z lamelami z włókna węglowego i aluminium" data-i-alt="alt_tech">
+      <figcaption class="cap">Radialstrahler · 360°</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= COLLECTIONS ================= -->
+<section class="section collections" id="collections" aria-labelledby="collTitle">
+  <div class="container">
+    <header class="sec-head">
+      <div class="eyebrow center reveal" data-i="coll_label">04 — Kolekcje</div>
+      <h2 class="h-display h2 reveal" id="collTitle" data-i-html="coll_title">Od Cadenza <em>po 101 X‑Treme.</em></h2>
+      <p class="lead reveal" data-i="coll_p">Trzy linie produktów zbudowane na tych samych zasadach.</p>
+    </header>
+    <div class="cards">
+      <article class="card reveal">
+        <div class="ph"><img data-img="reference" loading="lazy" decoding="async" width="2000" height="1000" alt="MBL Reference Line — system 101 X-Treme we wnętrzu" data-i-alt="alt_ref"></div>
+        <div class="body stagger">
+          <div class="kicker" data-i="ref_k">Bez kompromisów</div>
+          <h3>Reference <span>Line</span></h3>
+          <p data-i="ref_p">Szczyt elektroniki MBL.</p>
+          <div class="models">101 E MKII · 101 X-Treme MKII · 9011 · 6010 D · 1611 F</div>
+          <div class="card-actions">
+            <button class="btn btn--sm" type="button" data-gallery="reference"><span data-i="gal_btn">Galeria</span><span class="arr" aria-hidden="true">＋</span></button>
+            <a class="btn btn--sm" data-ext="mbl" target="_blank" rel="noopener noreferrer"><span data-i="explore">Odkryj</span><span class="arr" aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="ph"><img data-img="noble" loading="lazy" decoding="async" width="2000" height="1618" alt="MBL Noble Line — kolumny i elektronika we wnętrzu" data-i-alt="alt_noble"></div>
+        <div class="body stagger">
+          <div class="kicker" data-i="nob_k">Pewna obecność</div>
+          <h3>Noble <span>Line</span></h3>
+          <p data-i="nob_p">Zaawansowana technologia.</p>
+          <div class="models">116 F · N11 · N15 · N31 · N51</div>
+          <div class="card-actions">
+            <button class="btn btn--sm" type="button" data-gallery="noble"><span data-i="gal_btn">Galeria</span><span class="arr" aria-hidden="true">＋</span></button>
+            <a class="btn btn--sm" data-ext="mbl" target="_blank" rel="noopener noreferrer"><span data-i="explore">Odkryj</span><span class="arr" aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="ph"><img data-img="cadenza" loading="lazy" decoding="async" width="2000" height="1250" alt="MBL Cadenza Line — kolumny 126 i elektronika we wnętrzu" data-i-alt="alt_cad"></div>
+        <div class="body stagger">
+          <div class="kicker" data-i="cad_k">Dyskretna elegancja</div>
+          <h3>Cadenza <span>Line</span></h3>
+          <p data-i="cad_p">Wyważone proporcje.</p>
+          <div class="models">126 · 120 · C11 · C15 · C31 · C41 · C51</div>
+          <div class="card-actions">
+            <button class="btn btn--sm" type="button" data-gallery="cadenza"><span data-i="gal_btn">Galeria</span><span class="arr" aria-hidden="true">＋</span></button>
+            <a class="btn btn--sm" data-ext="mbl" target="_blank" rel="noopener noreferrer"><span data-i="explore">Odkryj</span><span class="arr" aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="coll-foot reveal">
+      <p data-i="coll_foot">Pełna oferta i szczegóły modeli — na stronie Referenz Studio.</p>
+      <a class="btn btn--gold" data-ext="mbl" target="_blank" rel="noopener noreferrer"><span data-i="coll_cta">Zobacz pełną ofertę MBL</span><span class="arr" aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GERMAN ENGINEERING ================= -->
+<section class="section engineering" id="engineering" aria-labelledby="engTitle">
+  <div class="container split">
+    <div class="eng-media">
+      <figure class="frame reveal-img" style="margin:0">
+        <img data-img="engineering" loading="lazy" decoding="async" width="2000" height="1500" alt="Odtwarzacz MBL Reference 1611 F ze złotymi detalami we wnętrzu" data-i-alt="alt_eng">
+      </figure>
+      <div class="badge reveal"><b>Berlin</b><span>Made in Germany</span></div>
+    </div>
+    <div>
+      <div class="eyebrow reveal" data-i="eng_label">05 — Niemiecka inżynieria</div>
+      <h2 class="h-display h2 reveal" id="engTitle" data-i-html="eng_title">Ręcznie tworzone <em>w Berlinie.</em></h2>
+      <p class="lead reveal" data-i="eng_p1">MBL działa jak prawdziwa manufaktura.</p>
+      <p class="lead reveal" data-i="eng_p2">Każda para kolumn opuszcza fabrykę z protokołem pomiarowym.</p>
+      <ul class="checklist reveal stagger">
+        <li data-i="eng_l1">Obudowy w lakierach fortepianowych, metalach szlachetnych i kolorach na zamówienie</li>
+        <li data-i="eng_l2">Elektronika składana w małych seriach</li>
+        <li data-i="eng_l3">Długoterminowy serwis</li>
+      </ul>
+      <a class="btn btn--dark reveal" data-ext="mbl" target="_blank" rel="noopener noreferrer"><span data-i="eng_cta">Poznaj jakość MBL</span><span class="arr" aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section class="experience" id="experience" aria-labelledby="expTitle">
+  <div class="container">
+    <div class="exp-box reveal">
+      <img data-img="experience" loading="lazy" decoding="async" width="2000" height="1000" alt="Salon z systemem MBL o zmierzchu" data-i-alt="alt_exp">
+      <div class="exp-content stagger">
+        <div class="eyebrow" data-i="exp_label">06 — Doświadcz MBL</div>
+        <h2 class="h-display h2" id="expTitle" data-i-html="exp_title">Usłysz różnicę, którą tworzy <em>Radialstrahler.</em></h2>
+        <p class="lead" data-i="exp_p">Najlepszym sposobem, by docenić MBL, jest posłuchać go osobiście.</p>
+        <a class="btn btn--gold" data-ext="mbl" target="_blank" rel="noopener noreferrer"><span data-i="exp_cta">Odkryj świat MBL</span><span class="arr" aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<!-- Dane kontaktowe PANAUDIO -->
+<section class="section contact" id="contact" aria-labelledby="contactTitle">
+  <div class="container split">
+    <div>
+      <div class="eyebrow reveal" data-i="contact_label">07 — Kontakt</div>
+      <h2 class="h-display h2 reveal" id="contactTitle">PAN<em>AUDIO</em></h2>
+      <p class="lead reveal" data-i="contact_p">Prezentujemy niemiecką markę MBL w Polsce.</p>
+      <div class="actions reveal">
+        <a class="btn btn--gold" data-ext="mbl" target="_blank" rel="noopener noreferrer"><span data-i="contact_cta">Przejdź do Referenz Studio</span><span class="arr" aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+    <address class="contact-list reveal stagger" style="font-style:normal">
+      <div class="contact-item"><small data-i="c_phone">Telefon / WhatsApp</small><a href="tel:+48502374921">+48 502 374 921</a><a class="note" href="https://wa.me/48502374921" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div>
+      <div class="contact-item"><small>E-mail</small><a class="mail" href="mailto:panaudio.sales@gmail.com">panaudio.sales@gmail.com</a></div>
+      <div class="contact-item"><small data-i="c_web">Strona</small><a href="https://panaudio.com" target="_blank" rel="noopener noreferrer">panaudio.com ↗</a></div>
+      <div class="contact-item"><small data-i="c_addr">Adres</small><p>Str. Kungu 25<br>Riga, LV-1050, Latvia</p></div>
+    </address>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="f-grid">
+      <div class="f-brand">
+        <a class="logo" href="#top" aria-label="PANAUDIO — home"><b>PANAUDIO</b><small>High-End Audio</small></a>
+        <p data-i="f_tag">Prezentujemy niemiecki high-end audio MBL w Polsce.</p>
+      </div>
+      <div>
+        <h4 data-i="f_nav">Nawigacja</h4>
+        <ul>
+          <li><a href="#about" data-i="nav_mbl">MBL</a></li>
+          <li><a href="#sound" data-i="nav_phil">Filozofia</a></li>
+          <li><a href="#technology" data-i="nav_tech">Technologia</a></li>
+          <li><a href="#collections" data-i="nav_coll">Kolekcje</a></li>
+          <li><a href="#contact" data-i="nav_contact">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>MBL</h4>
+        <ul>
+          <li><a data-ext="mbl" target="_blank" rel="noopener noreferrer"><span data-i="f_mbl">MBL w Referenz Studio</span> ↗</a></li>
+          <li><button type="button" data-gallery="reference">Reference Line</button></li>
+          <li><button type="button" data-gallery="noble">Noble Line</button></li>
+          <li><button type="button" data-gallery="cadenza">Cadenza Line</button></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i="f_legal">Informacje</h4>
+        <ul>
+          <li><button type="button" data-modal="privacy" data-i="privacy">Polityka prywatności</button></li>
+          <li><button type="button" data-modal="cookies" data-i="cookies">Polityka cookies</button></li>
+          <li><button type="button" id="cookieSettings" data-i="cookie_settings">Ustawienia cookies</button></li>
+          <li class="lang" role="group" aria-label="Język / Language" style="display:inline-flex;width:max-content;margin-top:6px">
+            <button type="button" data-lang="pl" aria-pressed="true">PL</button>
+            <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© <span id="year">2026</span> PANAUDIO. <span data-i="rights">Wszelkie prawa zastrzeżone.</span></span>
+      <span data-i="disclaimer">MBL jest znakiem towarowym MBL Akustikgeräte GmbH. Szczegóły produktów — Referenz Studio.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= COOKIE BANNER ================= -->
+<div class="cookie" id="cookie" role="region" aria-label="Cookies" aria-live="polite" hidden>
+  <p><span data-i="cookie_text">Używamy niezbędnych plików cookie.</span> <button type="button" data-modal="cookies" data-i="cookie_more">Polityka cookies</button></p>
+  <div class="actions">
+    <button class="btn btn--sm" type="button" id="cookieReject" data-i="cookie_reject">Odrzuć</button>
+    <button class="btn btn--sm btn--gold" type="button" id="cookieAccept" data-i="cookie_accept">Akceptuj</button>
+  </div>
+</div>
+
+<!-- ================= MODALS ================= -->
+<div class="overlay" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal">
+    <button class="x" type="button" data-close data-i-aria="close" aria-label="Zamknij">×</button>
+    <div class="eyebrow">PANAUDIO</div>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<div class="overlay lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lbTitle" aria-hidden="true">
+  <div class="lb-top"><b id="lbTitle">Gallery</b><span id="lbCount">1 / 1</span></div>
+  <button class="x" type="button" data-close data-i-aria="close" aria-label="Zamknij">×</button>
+  <div class="lb-stage">
+    <img id="lbImg" alt="">
+    <button class="lb-nav lb-prev" type="button" id="lbPrev" data-i-aria="prev" aria-label="Poprzednie">←</button>
+    <button class="lb-nav lb-next" type="button" id="lbNext" data-i-aria="next" aria-label="Następne">→</button>
+  </div>
+  <div class="lb-thumbs" id="lbThumbs"></div>
+</div>
+
+<script>
+/* =========================================================
+   1) IMAGES — replace any path or URL here.
+   Files live in the local folder "Image/" next to this HTML.
+   You can also paste a full https:// URL instead of a path.
+   ========================================================= */
+const SITE_IMAGES = {
+  hero:        'Image/hero.jpg',        // Hero poster (shown before / instead of the video)
+  about:       'Image/about.jpg',       // Block 3 — About MBL
+  sound:       'Image/sound.jpg',       // Block 4 — The Art of Sound (background)
+  technology:  'Image/technology.jpg',  // Block 5 — Radialstrahler close-up
+  reference:   'Image/reference.jpg',   // Block 6 — Reference Line card
+  noble:       'Image/noble.jpg',       // Block 6 — Noble Line card
+  cadenza:     'Image/cadenza.jpg',     // Block 6 — Cadenza Line card
+  engineering: 'Image/engineering.jpg', // Block 7 — German Engineering
+  experience:  'Image/experience.jpg'   // Block 8 — Experience MBL
+};
+
+/* Hero video — local folder "Hero section/" */
+const SITE_VIDEOS = {
+  hero: 'Hero section/mbl-hero.mp4'
+};
+
+/* Collection galleries — folder "Image/gallery/<line>/<line>-01.jpg …".
+   To add photos: drop the file into the folder and increase "count",
+   or replace the list with your own array of paths. */
+const gallery = (line, count) => Array.from({length: count}, (_, i) => `Image/gallery/${line}/${line}-${String(i + 1).padStart(2, '0')}.jpg`);
+const SITE_GALLERIES = {
+  reference: { title: 'Reference Line', images: gallery('reference', 12) },
+  noble:     { title: 'Noble Line',     images: gallery('noble', 10) },
+  cadenza:   { title: 'Cadenza Line',   images: gallery('cadenza', 11) }
+};
+
+/* =========================================================
+   2) EXTERNAL LINKS — change the MBL page address in one place.
+   ========================================================= */
+const EXTERNAL_LINKS = {
+  mbl: 'https://juliart1310.wixstudio.com/website/brands-en/mbl' // MBL page at Referenz Studio
+};
+
+/* =========================================================
+   3) TRANSLATIONS (PL default / EN)
+   ========================================================= */
+const I18N = {
+pl: {
+  meta_title: 'PANAUDIO × MBL — Dźwięk bez kompromisów | High-End Audio z Berlina',
+  meta_desc: 'PANAUDIO prezentuje MBL — niemiecki high-end audio z Berlina. Technologia Radialstrahler 360°, linie Reference, Noble i Cadenza.',
+  skip: 'Przejdź do treści',
+  nav_mbl: 'MBL', nav_phil: 'Filozofia', nav_tech: 'Technologia', nav_coll: 'Kolekcje', nav_contact: 'Kontakt',
+  hdr_cta: 'Produkty MBL', menu_open: 'Otwórz menu', menu_close: 'Zamknij menu', close: 'Zamknij', prev: 'Poprzednie zdjęcie', next: 'Następne zdjęcie',
+  hero_eyebrow: 'PANAUDIO prezentuje',
+  hero_title: 'Dźwięk <em>bez kompromisów</em>',
+  hero_sub: 'Niemiecka inżynieria, ręczne wykonanie w Berlinie i technologia Radialstrahler, która wypełnia pomieszczenie dźwiękiem w 360°. Muzyka, która brzmi jak na żywo.',
+  hero_btn1: 'Odkryj MBL', hero_btn2: 'Zobacz kolekcje', scroll: 'Przewiń',
+  about_label: '01 — O marce',
+  about_title: 'Nie tylko słyszeć. <em>Poczuć muzykę.</em>',
+  about_p1: 'MBL to jeden z najbardziej cenionych niemieckich producentów high-end audio, łączący innowacyjną inżynierię akustyczną z wyjątkowym wzornictwem i rzemiosłem.',
+  about_p2: 'Firma powstała w Berlinie w 1979 roku, by rozwiązać zasadnicze ograniczenie klasycznych kolumn: prawdziwe instrumenty promieniują dźwiękiem we wszystkich kierunkach, a typowe głośniki kierują go w jedno miejsce odsłuchu. Wokół tej idei MBL buduje kompletne systemy — od kolumn, przez przedwzmacniacze i końcówki mocy, po źródła cyfrowe.',
+  about_p3: 'Od ponad czterdziestu lat cel pozostaje ten sam: nie tylko odtwarzać nagrania, lecz przenosić słuchacza w samo serce wykonania — tam, gdzie muzyka jest dynamiczna, namacalna i pełna emocji.',
+  fact1: 'Założenie w Berlinie', fact2: 'Dookólne promieniowanie dźwięku', fact3: 'Lat doświadczenia',
+  about_cta: 'Dowiedz się więcej o MBL',
+  sound_label: '02 — Sztuka dźwięku',
+  sound_title: 'Muzyka, która wypełnia <em>całą przestrzeń.</em>',
+  sound_p: 'Jak koncert na żywo, który wypełnia całą salę, system MBL tworzy w domu wspólne pole dźwiękowe. Fortepian ma obecność i skalę, głos znajduje się na wysokości człowieka między kolumnami, a perkusja zyskuje autentyczną głębię. To nie złudzenie — tak zachowuje się dźwięk, który jest promieniowany, a nie kierowany.',
+  quote: '„Muzyka nie powinna być ograniczona do jednego miejsca w pokoju.”',
+  quote_cite: 'United in Music — filozofia MBL',
+  tech_label: '03 — Technologia',
+  tech_title: 'Radialstrahler. <em>Pełne 360° dźwięku.</em>',
+  tech_p: 'Każda kolumna MBL powstaje według jednej zasady: dźwięk ma wypełniać pomieszczenie, a nie być kierowany w jeden punkt. Przetworniki Radialstrahler wykorzystują cienkie, wygięte lamele z włókna węglowego i aluminium, które rozprowadzają dźwięk równomiernie we wszystkich kierunkach poziomych.',
+  f1_t: 'Dźwięk dookólny', f1_p: 'Promieniowanie w 360° sprawia, że scena muzyczna pozostaje stabilna niezależnie od miejsca w pokoju.',
+  f2_t: 'Przestrzenna scena', f2_p: 'Precyzyjnie rozmieszczone instrumenty, głosy z głębią i wiernie oddana akustyka miejsca nagrania.',
+  f3_t: 'Innowacyjna konstrukcja', f3_p: 'Wszystkie zakresy działają według tej samej zasady dookólnej — kolumna brzmi jak jedno, spójne źródło.',
+  f4_t: 'Naturalne brzmienie', f4_p: 'Każda lamela jest formowana, wyważana i montowana ręcznie w Berlinie, a przetworniki są mierzone i parowane.',
+  tech_cta: 'Poznaj technologię MBL',
+  coll_label: '04 — Kolekcje',
+  coll_title: 'Od Cadenza <em>po 101 X‑Treme.</em>',
+  coll_p: 'Trzy linie produktów MBL, zbudowane na tych samych zasadach i różniące się poziomem ambicji — każda dostępna w wielu wykończeniach, od lakierów fortepianowych po metale szlachetne.',
+  ref_k: 'Bez kompromisów', ref_p: 'Szczyt elektroniki MBL, stworzony z myślą o bezkompromisowej perfekcji brzmienia, materiałów i wykonania.',
+  nob_k: 'Pewna obecność', nob_p: 'Zaawansowana technologia i imponujące możliwości, wyrażone w wyróżniającym się, wyrafinowanym języku designu MBL.',
+  cad_k: 'Dyskretna elegancja', cad_p: 'Wyważone proporcje, stonowana elegancja i wyrafinowana niemiecka inżynieria w celowo powściągliwej formie.',
+  gal_btn: 'Galeria', explore: 'Odkryj',
+  coll_foot: 'Pełna oferta i szczegóły modeli — na stronie MBL w Referenz Studio.',
+  coll_cta: 'Zobacz pełną ofertę MBL',
+  eng_label: '05 — Niemiecka inżynieria',
+  eng_title: 'Ręcznie tworzone <em>w Berlinie.</em>',
+  eng_p1: 'MBL działa jak prawdziwa manufaktura. Projektowanie, obróbka, montaż i końcowe strojenie odbywają się w Berlinie, a kluczowe zadania wykonują wieloletni specjaliści — nie roboty.',
+  eng_p2: 'Każda para kolumn opuszcza fabrykę z dobranymi przetwornikami i udokumentowanym protokołem pomiarowym, a każdy wzmacniacz jest odsłuchiwany przed wysyłką. Dla MBL rzemiosło sięga od zwrotnicy po ostatnią śrubę.',
+  eng_l1: 'Obudowy w lakierach fortepianowych, metalach szlachetnych i kolorach na zamówienie',
+  eng_l2: 'Elektronika składana w małych seriach i wygrzewana przed pomiarem',
+  eng_l3: 'Serwis obejmujący nawet komponenty sprzed trzydziestu lat',
+  eng_cta: 'Poznaj jakość MBL',
+  exp_label: '06 — Doświadcz MBL',
+  exp_title: 'Usłysz różnicę, którą tworzy <em>Radialstrahler.</em>',
+  exp_p: 'Najlepszym sposobem, by docenić MBL, jest posłuchać go osobiście. Większość słuchaczy mówi nie tylko o imponującym dźwięku, ale o wrażeniu, że muzycy są naprawdę obecni w pokoju.',
+  exp_cta: 'Odkryj świat MBL',
+  contact_label: '07 — Kontakt',
+  contact_p: 'Prezentujemy niemiecką markę MBL w Polsce. Skontaktuj się z nami, aby porozmawiać o systemach MBL. Pełne informacje o produktach znajdziesz na stronie Referenz Studio.',
+  contact_cta: 'Przejdź do Referenz Studio',
+  c_phone: 'Telefon / WhatsApp', c_web: 'Strona', c_addr: 'Adres',
+  f_tag: 'Prezentujemy niemiecki high-end audio MBL w Polsce. Szczegóły produktów — na stronie Referenz Studio.',
+  f_nav: 'Nawigacja', f_mbl: 'MBL w Referenz Studio', f_legal: 'Informacje',
+  privacy: 'Polityka prywatności', cookies: 'Polityka cookies', cookie_settings: 'Ustawienia cookies',
+  rights: 'Wszelkie prawa zastrzeżone.',
+  disclaimer: 'MBL jest znakiem towarowym jego właściciela. Szczegóły produktów — Referenz Studio.',
+  cookie_text: 'Używamy niezbędnych plików cookie, aby strona działała poprawnie. Za Twoją zgodą możemy używać opcjonalnych cookies analitycznych.',
+  cookie_more: 'Polityka cookies', cookie_accept: 'Akceptuj', cookie_reject: 'Odrzuć',
+  gallery: 'Galeria',
+  alt_about: 'Kolumny MBL 101 E MKII Radialstrahler we wnętrzu salonu',
+  alt_tech: 'Zbliżenie przetwornika Radialstrahler MBL z lamelami z włókna węglowego i aluminium',
+  alt_ref: 'MBL Reference Line — system 101 X-Treme we wnętrzu',
+  alt_noble: 'MBL Noble Line — kolumny i elektronika we wnętrzu',
+  alt_cad: 'MBL Cadenza Line — kolumny i elektronika we wnętrzu',
+  alt_eng: 'Odtwarzacz MBL Reference 1611 F ze złotymi detalami we wnętrzu',
+  alt_exp: 'Salon z systemem MBL o zmierzchu'
+},
+en: {
+  meta_title: 'PANAUDIO × MBL — Sound Without Compromise | High-End Audio from Berlin',
+  meta_desc: 'PANAUDIO presents MBL — German high-end audio from Berlin. Radialstrahler 360° technology, Reference, Noble and Cadenza lines.',
+  skip: 'Skip to content',
+  nav_mbl: 'MBL', nav_phil: 'Philosophy', nav_tech: 'Technology', nav_coll: 'Collections', nav_contact: 'Contact',
+  hdr_cta: 'MBL Products', menu_open: 'Open menu', menu_close: 'Close menu', close: 'Close', prev: 'Previous image', next: 'Next image',
+  hero_eyebrow: 'PANAUDIO presents',
+  hero_title: 'Sound <em>without compromise</em>',
+  hero_sub: 'German engineering, hand-built in Berlin, and Radialstrahler technology that fills the room with sound in 360°. Music that feels truly live.',
+  hero_btn1: 'Discover MBL', hero_btn2: 'View collections', scroll: 'Scroll',
+  about_label: '01 — The brand',
+  about_title: 'Beyond hearing. <em>Feel the music.</em>',
+  about_p1: 'MBL is one of Germany’s most respected high-end audio manufacturers, combining innovative acoustic engineering with outstanding industrial design and craftsmanship.',
+  about_p2: 'Founded in Berlin in 1979, the company set out to solve a key limitation of conventional loudspeakers: real instruments radiate sound in all directions, while standard speakers project it toward a single listening position. Around this idea MBL builds complete systems — loudspeakers, preamplifiers, power amplifiers and digital sources.',
+  about_p3: 'For more than forty years, the goal has remained the same: not merely to play back recordings, but to transport listeners into the heart of a performance — where music feels dynamic, tangible and alive with emotion.',
+  fact1: 'Founded in Berlin', fact2: 'Omnidirectional sound radiation', fact3: 'Years of expertise',
+  about_cta: 'Learn more about MBL',
+  sound_label: '02 — The art of sound',
+  sound_title: 'Music that fills <em>the entire room.</em>',
+  sound_p: 'Like a live concert that fills the whole hall, an MBL system creates a shared sound field at home. A grand piano has presence and scale, a voice is placed at human height between the speakers, and a drum kit gains authentic depth. It is not an illusion — it is how sound behaves when it is radiated rather than projected.',
+  quote: '“Music should never be confined to a single place in the room.”',
+  quote_cite: 'United in Music — the MBL philosophy',
+  tech_label: '03 — Technology',
+  tech_title: 'Radialstrahler. <em>A full 360° of sound.</em>',
+  tech_p: 'Every MBL loudspeaker follows one core principle: sound should fill the room rather than be aimed at a single point. Radialstrahler drivers use thin, curved lamellas of carbon fibre and aluminium that distribute sound evenly in all horizontal directions.',
+  f1_t: 'Omnidirectional sound', f1_p: '360° radiation keeps the soundstage stable and immersive wherever you sit in the room.',
+  f2_t: 'Spatial soundstage', f2_p: 'Precisely placed instruments, voices with depth and dimension, and faithfully reproduced venue acoustics.',
+  f3_t: 'Innovative design', f3_p: 'Every frequency unit follows the same omnidirectional principle — the speaker acts as one cohesive source.',
+  f4_t: 'Natural, lifelike sound', f4_p: 'Each lamella is formed, balanced and assembled by hand in Berlin; every driver is measured and paired.',
+  tech_cta: 'Explore MBL technology',
+  coll_label: '04 — Collections',
+  coll_title: 'From Cadenza <em>to the 101 X‑Treme.</em>',
+  coll_p: 'Three MBL product lines, built on the same principles and distinguished by their level of ambition — each available in a range of finishes, from piano lacquers to precious metals.',
+  ref_k: 'Without compromise', ref_p: 'The pinnacle of MBL electronics, created for uncompromising perfection in sound, materials and craftsmanship.',
+  nob_k: 'Confident presence', nob_p: 'Advanced technology and commanding performance expressed through a distinctive, sophisticated MBL design language.',
+  cad_k: 'Understated presence', cad_p: 'Refined proportions, understated elegance and sophisticated German engineering in a deliberately restrained form.',
+  gal_btn: 'Gallery', explore: 'Explore',
+  coll_foot: 'The full range and model details are on the MBL page at Referenz Studio.',
+  coll_cta: 'View the full MBL range',
+  eng_label: '05 — German engineering',
+  eng_title: 'Handcrafted <em>in Berlin.</em>',
+  eng_p1: 'MBL operates as a true manufactory. Development, machining, assembly and final voicing are all completed in Berlin, with critical tasks handled by long-trained specialists — not robots.',
+  eng_p2: 'Every loudspeaker pair leaves the factory with matched drivers and a documented measurement protocol, and every amplifier is auditioned before shipping. For MBL, craftsmanship extends from the crossover to the final screw.',
+  eng_l1: 'Cabinets in piano lacquers, precious metals and custom colours',
+  eng_l2: 'Electronics assembled in small batches and burned in before measurement',
+  eng_l3: 'Service support even for components built thirty years ago',
+  eng_cta: 'Discover MBL quality',
+  exp_label: '06 — Experience MBL',
+  exp_title: 'Hear the difference the <em>Radialstrahler</em> makes.',
+  exp_p: 'The best way to appreciate MBL is to experience it first-hand. Most listeners describe not just impressive sound, but the sensation that the musicians are truly present in the room.',
+  exp_cta: 'Discover the world of MBL',
+  contact_label: '07 — Contact',
+  contact_p: 'We present the German brand MBL in Poland. Get in touch to talk about MBL systems. Full product information is available on the Referenz Studio website.',
+  contact_cta: 'Visit Referenz Studio',
+  c_phone: 'Phone / WhatsApp', c_web: 'Website', c_addr: 'Address',
+  f_tag: 'Presenting MBL German high-end audio in Poland. Product details on the Referenz Studio website.',
+  f_nav: 'Navigation', f_mbl: 'MBL at Referenz Studio', f_legal: 'Information',
+  privacy: 'Privacy Policy', cookies: 'Cookie Policy', cookie_settings: 'Cookie settings',
+  rights: 'All rights reserved.',
+  disclaimer: 'MBL is a trademark of its respective owner. Product details — Referenz Studio.',
+  cookie_text: 'We use essential cookies to make this site work. With your consent we may also use optional analytics cookies.',
+  cookie_more: 'Cookie Policy', cookie_accept: 'Accept', cookie_reject: 'Decline',
+  gallery: 'Gallery',
+  alt_about: 'MBL 101 E MKII Radialstrahler loudspeakers in a living room',
+  alt_tech: 'Close-up of an MBL Radialstrahler driver with carbon fibre and aluminium lamellas',
+  alt_ref: 'MBL Reference Line — 101 X-Treme system in an interior',
+  alt_noble: 'MBL Noble Line — loudspeakers and electronics in an interior',
+  alt_cad: 'MBL Cadenza Line — loudspeakers and electronics in an interior',
+  alt_eng: 'MBL Reference 1611 F player with gold details in an interior',
+  alt_exp: 'Living room with an MBL system at dusk'
+}};
+
+/* Legal templates — NOT final documents. To be reviewed by the site owner and a lawyer. */
+const LEGAL = {
+pl: {
+  privacy: `<h2 id="modalTitle">Polityka prywatności</h2>
+<p>Niniejsza polityka opisuje zasady przetwarzania danych osobowych użytkowników strony PANAUDIO.</p>
+<h3>1. Administrator danych</h3><p>[Pełna nazwa firmy PANAUDIO, adres siedziby, NIP/REGON, e-mail kontaktowy].</p>
+<h3>2. Zakres danych</h3><p>Strona nie zawiera formularzy. Dane osobowe mogą być przetwarzane, gdy kontaktujesz się z nami telefonicznie, przez WhatsApp lub e-mail (np. imię, numer telefonu, adres e-mail, treść wiadomości).</p>
+<h3>3. Cele i podstawy prawne</h3><p>Udzielenie odpowiedzi na zapytanie (art. 6 ust. 1 lit. b lub f RODO); opcjonalna analityka — wyłącznie za zgodą (art. 6 ust. 1 lit. a RODO).</p>
+<h3>4. Okres przechowywania</h3><p>[Do uzupełnienia].</p>
+<h3>5. Twoje prawa</h3><p>Prawo dostępu, sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia danych, sprzeciwu, cofnięcia zgody oraz skargi do Prezesa UODO.</p>
+<h3>6. Linki zewnętrzne</h3><p>Strona zawiera odnośniki do serwisu Referenz Studio, który ma własną politykę prywatności.</p>`,
+  cookies: `<h2 id="modalTitle">Polityka cookies</h2>
+<h3>Czym są cookies?</h3><p>To niewielkie pliki zapisywane w przeglądarce. Strona korzysta także z pamięci lokalnej (localStorage).</p>
+<h3>Niezbędne</h3><p>Zapamiętanie wybranego języka (<code>panaudio-lang</code>) oraz Twojej decyzji dotyczącej cookies (<code>panaudio-consent</code>). Nie wymagają zgody.</p>
+<h3>Opcjonalne (analityczne)</h3><p>Ładowane wyłącznie po kliknięciu „Akceptuj”. [Wymień narzędzia, np. Google Analytics, jeśli zostaną dodane]. Obecnie żadne opcjonalne skrypty nie są wdrożone.</p>
+<h3>Zasoby zewnętrzne</h3><p>Fonty mogą być pobierane z Google Fonts. [Zweryfikować lub hostować lokalnie].</p>
+<h3>Zmiana decyzji</h3><p>Swoją decyzję możesz zmienić w każdej chwili, klikając „Ustawienia cookies” w stopce strony.</p>`
+},
+en: {
+  privacy: `<h2 id="modalTitle">Privacy Policy</h2>
+<p>This policy describes how personal data of PANAUDIO website visitors is processed.</p>
+<h3>1. Data controller</h3><p>[Full PANAUDIO company name, registered address, tax ID, contact e-mail].</p>
+<h3>2. Data we process</h3><p>This website has no forms. Personal data may be processed when you contact us by phone, WhatsApp or e-mail (e.g. name, phone number, e-mail address, message content).</p>
+<h3>3. Purposes and legal bases</h3><p>Responding to your enquiry (Art. 6(1)(b) or (f) GDPR); optional analytics — only with your consent (Art. 6(1)(a) GDPR).</p>
+<h3>4. Retention</h3><p>[To be completed].</p>
+<h3>5. Your rights</h3><p>Right of access, rectification, erasure, restriction, portability, objection, withdrawal of consent and lodging a complaint with the supervisory authority.</p>
+<h3>6. External links</h3><p>This site links to Referenz Studio, which has its own privacy policy.</p>`,
+  cookies: `<h2 id="modalTitle">Cookie Policy</h2>
+<h3>What are cookies?</h3><p>Small files stored by your browser. This site also uses local storage (localStorage).</p>
+<h3>Essential</h3><p>Remembering your language (<code>panaudio-lang</code>) and your cookie choice (<code>panaudio-consent</code>). No consent required.</p>
+<h3>Optional (analytics)</h3><p>Loaded only after you click “Accept”. [List tools, e.g. Google Analytics, if added]. No optional scripts are currently installed.</p>
+<h3>External resources</h3><p>Fonts may be loaded from Google Fonts. [Verify or self-host].</p>
+<h3>Changing your choice</h3><p>You can change your decision at any time via “Cookie settings” in the footer.</p>`
+}};
+
+/* =========================================================
+   4) APP
+   ========================================================= */
+(function () {
+  'use strict';
+  const doc = document.documentElement;
+  doc.classList.add('js');
+  const $ = (s, c = document) => c.querySelector(s);
+  const $$ = (s, c = document) => Array.from(c.querySelectorAll(s));
+  const store = {
+    get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+    set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  };
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let lang = store.get('panaudio-lang') === 'en' ? 'en' : 'pl';
+  const t = k => (I18N[lang] && I18N[lang][k]) || I18N.pl[k] || '';
+
+  /* --- images with graceful fallback --- */
+  function markFailed(img) { const box = img.closest('.frame,.ph,.exp-box,.bg') || img.parentElement; if (box) box.classList.add('img-failed'); }
+  $$('img[data-img]').forEach(img => {
+    const src = SITE_IMAGES[img.dataset.img];
+    img.addEventListener('error', () => markFailed(img), { once: true });
+    if (src) img.src = src; else markFailed(img);
+  });
+
+  /* --- hero video --- */
+  const hero = $('.hero'), video = $('#heroVideo');
+  hero.style.backgroundImage = `url("${SITE_IMAGES.hero}")`;
+  video.poster = SITE_IMAGES.hero;
+  if (reduceMotion || !SITE_VIDEOS.hero) { video.remove(); }
+  else {
+    video.src = SITE_VIDEOS.hero;
+    video.addEventListener('error', () => video.remove(), { once: true });
+    const p = video.play(); if (p && p.catch) p.catch(() => {});
+  }
+
+  /* --- external links --- */
+  $$('[data-ext]').forEach(a => { a.href = EXTERNAL_LINKS[a.dataset.ext] || EXTERNAL_LINKS.mbl; });
+
+  /* --- split headings into masked words --- */
+  $$('.h2, #heroTitle').forEach(el => el.classList.add('split-h'));
+  function splitWords(el) {
+    let i = 0;
+    const walk = node => {
+      Array.from(node.childNodes).forEach(n => {
+        if (n.nodeType === 3) {
+          const frag = document.createDocumentFragment();
+          n.textContent.split(/(\s+)/).forEach(tok => {
+            if (!tok) return;
+            if (/^\s+$/.test(tok)) { frag.appendChild(document.createTextNode(tok)); return; }
+            const w = document.createElement('span'), inner = document.createElement('span');
+            w.className = 'w'; inner.textContent = tok; inner.style.setProperty('--i', i++);
+            w.appendChild(inner); frag.appendChild(w);
+          });
+          n.replaceWith(frag);
+        } else if (n.nodeType === 1 && !n.classList.contains('w')) walk(n);
+      });
+    };
+    walk(el);
+  }
+
+  /* --- i18n --- */
+  function applyLang(l) {
+    lang = I18N[l] ? l : 'pl';
+    doc.lang = lang;
+    document.title = t('meta_title');
+    $('meta[name="description"]').setAttribute('content', t('meta_desc'));
+    $('meta[property="og:title"]').setAttribute('content', t('meta_title'));
+    $('meta[property="og:description"]').setAttribute('content', t('meta_desc'));
+    $('meta[property="og:locale"]').setAttribute('content', lang === 'pl' ? 'pl_PL' : 'en_GB');
+    $$('[data-i]').forEach(el => { const v = t(el.dataset.i); if (v) el.textContent = v; });
+    $$('[data-i-html]').forEach(el => { const v = t(el.dataset.iHtml); if (v) el.innerHTML = v; });
+    $$('[data-i-alt]').forEach(el => { const v = t(el.dataset.iAlt); if (v) el.alt = v; });
+    $$('[data-i-aria]').forEach(el => { const v = t(el.dataset.iAria); if (v) el.setAttribute('aria-label', v); });
+    $$('[data-lang]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
+    $('.burger').setAttribute('aria-label', t(menuOpen ? 'menu_close' : 'menu_open'));
+    if (modal.classList.contains('open') && currentModal) $('#modalBody').innerHTML = LEGAL[lang][currentModal];
+    $$('.split-h').forEach(splitWords);
+    store.set('panaudio-lang', lang);
+  }
+  $$('[data-lang]').forEach(b => b.addEventListener('click', () => applyLang(b.dataset.lang)));
+
+  /* --- header: hide on scroll down, show on scroll up --- */
+  const header = $('#header'), progressBar = $('.progress i');
+  let lastY = window.scrollY, ticking = false;
+  function onScroll() {
+    const y = Math.max(0, window.scrollY), d = y - lastY;
+    header.classList.toggle('is-scrolled', y > 40);
+    if (menuOpen || y < 120) header.classList.remove('is-hidden');
+    else if (d > 6) header.classList.add('is-hidden');
+    else if (d < -6) header.classList.remove('is-hidden');
+    lastY = y;
+    progressBar.style.transform = `scaleX(${(y / Math.max(1, document.documentElement.scrollHeight - innerHeight)).toFixed(4)})`;
+    parallax();
+    ticking = false;
+  }
+  window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+
+  /* --- subtle parallax (desktop only) --- */
+  const px = $('[data-parallax]');
+  const canParallax = !reduceMotion && window.matchMedia('(min-width: 901px) and (hover: hover)').matches;
+  function parallax() {
+    if (!px || !canParallax) return;
+    const r = px.parentElement.getBoundingClientRect();
+    if (r.bottom < 0 || r.top > innerHeight) return;
+    const p = (r.top + r.height / 2 - innerHeight / 2) / innerHeight;
+    px.style.transform = `translate3d(0,${(p * -50).toFixed(1)}px,0)`;
+  }
+
+  /* --- mobile menu --- */
+  const burger = $('.burger'), mm = $('#mobileMenu');
+  let menuOpen = false;
+  function setMenu(open) {
+    menuOpen = open;
+    mm.classList.toggle('open', open);
+    mm.setAttribute('aria-hidden', String(!open));
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', t(open ? 'menu_close' : 'menu_open'));
+    document.body.classList.toggle('locked', open);
+    header.classList.remove('is-hidden');
+    $$('a,button', mm).forEach(el => el.tabIndex = open ? 0 : -1);
+  }
+  burger.addEventListener('click', () => setMenu(!menuOpen));
+  $$('a', mm).forEach(a => a.addEventListener('click', () => setMenu(false)));
+  $$('a,button', mm).forEach(el => el.tabIndex = -1);
+  window.addEventListener('resize', () => { if (menuOpen && innerWidth > 1180) setMenu(false); });
+  $$('.menu a, .logo').forEach(a => a.addEventListener('click', () => header.classList.remove('is-hidden')));
+
+  /* --- reveal on scroll --- */
+  const canAnimate = doc.classList.contains('motion');
+  $$('.reveal-img').forEach(el => { const e = document.createElement('i'); e.className = 'edge'; e.setAttribute('aria-hidden', 'true'); el.appendChild(e); });
+  $$('.stagger').forEach(el => Array.from(el.children).forEach((c, i) => c.style.setProperty('--i', i)));
+
+  function countUp(el) {
+    const to = +el.dataset.count, from = +(el.dataset.from || 0), suf = el.dataset.suffix || '', t0 = performance.now(), dur = 1800;
+    const step = now => { const k = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - k, 4); el.textContent = Math.round(from + (to - from) * e) + suf; if (k < 1) requestAnimationFrame(step); };
+    requestAnimationFrame(step);
+  }
+  function reveal(el) {
+    el.classList.add('in');
+    $$('[data-count]', el).forEach(countUp);
+    const delay = parseFloat(el.style.transitionDelay) || 0;
+    // after the entrance, hand transitions back to the element's own hover styles
+    setTimeout(() => { el.classList.add('done'); el.style.transitionDelay = ''; }, delay + 2600);
+  }
+  const revealEls = $$('.reveal, .reveal-img, .stagger');
+  if (canAnimate) {
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { reveal(e.target); io.unobserve(e.target); } });
+    }, { threshold: 0.14, rootMargin: '0px 0px -60px 0px' });
+    revealEls.forEach(el => {
+      const sibs = Array.from(el.parentElement.children).filter(c => c.classList.contains('reveal') || c.classList.contains('reveal-img'));
+      const i = sibs.indexOf(el);
+      if (i > 0) el.style.transitionDelay = Math.min(i, 6) * 120 + 'ms';
+      io.observe(el);
+    });
+    setTimeout(() => $('#heroTitle').classList.add('in'), 250);
+  } else revealEls.concat($('#heroTitle')).forEach(el => el.classList.add('in', 'done'));
+
+  /* --- overlays: shared focus handling --- */
+  let lastFocus = null;
+  function openOverlay(el) {
+    lastFocus = document.activeElement;
+    el.classList.add('open'); el.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('locked');
+    setTimeout(() => { const x = $('[data-close]', el); if (x) x.focus(); }, 60);
+  }
+  function closeOverlay(el) {
+    el.classList.remove('open'); el.setAttribute('aria-hidden', 'true');
+    if (!menuOpen) document.body.classList.remove('locked');
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  function trapFocus(e, el) {
+    const f = $$('button,a[href]', el).filter(n => n.offsetParent !== null);
+    if (!f.length) return;
+    const first = f[0], last = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  }
+
+  /* --- legal modals --- */
+  const modal = $('#modal');
+  let currentModal = null;
+  $$('[data-modal]').forEach(b => b.addEventListener('click', () => {
+    currentModal = b.dataset.modal;
+    $('#modalBody').innerHTML = LEGAL[lang][currentModal];
+    openOverlay(modal);
+  }));
+  modal.addEventListener('click', e => { if (e.target === modal || e.target.closest('[data-close]')) closeOverlay(modal); });
+
+  /* --- gallery lightbox --- */
+  const lb = $('#lightbox'), lbImg = $('#lbImg'), lbThumbs = $('#lbThumbs');
+  let gal = null, gi = 0;
+  function showImg(i) {
+    gi = (i + gal.images.length) % gal.images.length;
+    lbImg.classList.add('loading');
+    lbImg.onload = () => lbImg.classList.remove('loading');
+    lbImg.onerror = () => { lbImg.classList.remove('loading'); lbImg.alt = gal.title + ' — image unavailable'; };
+    lbImg.src = gal.images[gi];
+    lbImg.alt = `${gal.title} — ${t('gallery')} ${gi + 1}`;
+    $('#lbCount').textContent = `${gi + 1} / ${gal.images.length}`;
+    $$('button', lbThumbs).forEach((b, k) => b.setAttribute('aria-current', String(k === gi)));
+    const cur = lbThumbs.children[gi]; if (cur) cur.scrollIntoView({ block: 'nearest', inline: 'center', behavior: reduceMotion ? 'auto' : 'smooth' });
+    const nx = new Image(); nx.src = gal.images[(gi + 1) % gal.images.length];
+  }
+  function openGallery(key) {
+    gal = SITE_GALLERIES[key]; if (!gal || !gal.images.length) return;
+    $('#lbTitle').textContent = gal.title;
+    lbThumbs.innerHTML = '';
+    gal.images.forEach((src, k) => {
+      const b = document.createElement('button');
+      b.type = 'button'; b.setAttribute('aria-label', `${gal.title} ${k + 1}`);
+      const im = document.createElement('img'); im.loading = 'lazy'; im.alt = ''; im.src = src;
+      im.onerror = () => b.classList.add('img-failed');
+      b.appendChild(im); b.addEventListener('click', () => showImg(k));
+      lbThumbs.appendChild(b);
+    });
+    openOverlay(lb); showImg(0);
+  }
+  $$('[data-gallery]').forEach(b => b.addEventListener('click', () => openGallery(b.dataset.gallery)));
+  $('#lbPrev').addEventListener('click', () => showImg(gi - 1));
+  $('#lbNext').addEventListener('click', () => showImg(gi + 1));
+  lb.addEventListener('click', e => { if (e.target === lb || e.target.classList.contains('lb-stage') || e.target.closest('[data-close]')) closeOverlay(lb); });
+  let tx = null;
+  lb.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
+  lb.addEventListener('touchend', e => { if (tx === null) return; const dx = e.changedTouches[0].clientX - tx; if (Math.abs(dx) > 45) showImg(gi + (dx < 0 ? 1 : -1)); tx = null; });
+
+  /* --- keyboard --- */
+  document.addEventListener('keydown', e => {
+    const open = lb.classList.contains('open') ? lb : modal.classList.contains('open') ? modal : null;
+    if (e.key === 'Escape') { if (open) closeOverlay(open); else if (menuOpen) { setMenu(false); burger.focus(); } }
+    if (open === lb && e.key === 'ArrowRight') showImg(gi + 1);
+    if (open === lb && e.key === 'ArrowLeft') showImg(gi - 1);
+    if (open && e.key === 'Tab') trapFocus(e, open);
+  });
+
+  /* --- cookie consent --- */
+  const cookie = $('#cookie');
+  function loadOptionalScripts() {
+    /* Place analytics / marketing scripts here.
+       This function runs ONLY after the visitor clicks "Accept". */
+  }
+  function showCookie() { cookie.hidden = false; requestAnimationFrame(() => requestAnimationFrame(() => cookie.classList.add('show'))); }
+  function setConsent(v) {
+    store.set('panaudio-consent', v);
+    cookie.classList.remove('show');
+    setTimeout(() => { cookie.hidden = true; }, 700);
+    if (v === 'accepted') loadOptionalScripts();
+  }
+  $('#cookieAccept').addEventListener('click', () => setConsent('accepted'));
+  $('#cookieReject').addEventListener('click', () => setConsent('rejected'));
+  $('#cookieSettings').addEventListener('click', showCookie);
+  const consent = store.get('panaudio-consent');
+  if (consent === 'accepted') loadOptionalScripts();
+  else if (!consent) setTimeout(showCookie, 1400);
+
+  /* --- init --- */
+  $('#year').textContent = new Date().getFullYear();
+  applyLang(lang);
+  onScroll();
+})();
+</script>
+</body>
+</html>
